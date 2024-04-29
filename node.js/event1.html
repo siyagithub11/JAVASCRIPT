@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPT HANDLER</h1>
+    <button id="STOP">STOP</button>
+</body>
+    <script>
+// change the value of h1
+ const changeText=function(){document.querySelector('h1').innerHTML="javascript code" }
+
+//setTimeout(changeText,9000)
+//document.querySelector('h1').innerHTML="javascript code" // it is a code that change the value so now we add settimer
+     
+// cleartimeout= ITS use reference of settimeout so for this we change the
+// settimeout into a variable
+const  changedMe=AbortSignal(changeText,9000)
+document.querySelector('#STOP').addEventListener('click',function(){
+ clearTimeout(changedMe)
+ console.log("STopped")
+}
+)
+
+
+
+//  setTimeout(function () {
+        //    console.log("SIYA")
+        //}, 9000)
+    //const sayS= function(){
+      //  console.log("Siya")
+    //}
+    //setTimeout(sayS, 4000)
+    // the sayS is handler in this 
+    </script>
+
+</html>

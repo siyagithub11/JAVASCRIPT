@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:#ffff">
+    <ul class="language ">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+
+<script>
+
+function addLanguage(langName){
+    const li = document.createElement('li');
+    li.innerHTML='${langName}'
+    document.querySelector('.language')
+    appendChild(li)
+}
+addLanguage("python")
+addLanguage("typescript")
+
+// another way
+function addOptiLanguage(langName){
+    const li = document.createElement('li');
+li.appendChild(document.createTextNode(langName))
+document.querySelector('.language'.appendChild(li))
+}
+addOptiLanguage('GolANG')
+
+
+//EDIT
+ const secLang= document.querySelector("li:nth-child(2)")
+ secLang:innerHTML="Mojo"
+
+ // sec way
+ const newli= document.createElement('li')
+ newli.textContent="mojo"
+ secLang.replaceWith(newli)
+
+ // third way
+ const firstLang= document.querySelector("li=first-child")
+ firstLang.outerHTML='<li>Typescript </li>'
+
+ //remove
+ const lastLang= document.querySelector('li:last-child')
+ lastLang.remove();
+
+// both are same but the optimization of upper one is high like in upper the tree traverse take time
+</script>
+
+</html>
